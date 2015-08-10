@@ -46,9 +46,9 @@ define mozilla::wrap_32bit {
                     }
                 }
                 'i386': {}
-                default: { unimplemented() }
+                default: { fail "unimplemented on ${::osfamily} for ${::architecture}" }
             }
         }
-        default: { unimplemented() }
+        default: { fail "unimplemented on ${::osfamily}" }
     }
 }

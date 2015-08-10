@@ -38,9 +38,9 @@ class mozilla::wrap_32bit::prerequisites {
                 }
 # No wrapping is necessary for 32-bit plugins on a 32-bit system. 
                 'i386': {}
-                default: { unimplemented() }
+                default: { fail "unimplemented on ${::osfamily} for ${::architecture}" }
             }
         }
-        default: { unimplemented() }
+        default: { fail "unimplemented on ${::osfamily}" }
     }
 }
